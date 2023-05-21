@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from router import user
+from router import user, automobile
 
 app = FastAPI(
     title="Boyd-Auto Rest-API Backend",
@@ -12,3 +12,4 @@ def server():
     return "server up & running."
 
 app.include_router(user.user_router)
+app.include_router(automobile.automobile_router)
